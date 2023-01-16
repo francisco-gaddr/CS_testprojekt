@@ -1,0 +1,55 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+# Detta är en kommentar :) Kommer ej att tolkas som kod
+
+name: TestTrigger
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    
+    - name: Gör vår checkout
+      uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3.0.3
+      with:
+        dotnet-version: 6.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore
+      
+    - name: Test
+      run: dotnet test --no-build --verbosity normal --logger "trx;LogFileName=testresults.trx"
+      
+    - name: logging show
+      run: ls -la
+    
+        
+    - name: Store test results
+      uses: actions/upload-artifact@v3.1.2
+      with: 
+        name: mitt-test-resultat
+        path: TestResults
+
+    - uses: rocktimsaikia/badge-it@2.0.0
+        
+  
+
+
+
+
+
