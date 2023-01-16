@@ -42,7 +42,7 @@ jobs:
         path: testresults
 
   approve: 
-  
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
