@@ -39,7 +39,6 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with: 
         name: mitt-test-resultat
-        path: minTestLogg
 
   approve: 
   
@@ -54,7 +53,6 @@ jobs:
       uses: actions/download-artifact@v3.0.2
       with:
         name: mitt-test-resultat
-        path: minTestLogg
         
     - name: Check Test Results
       run : |
