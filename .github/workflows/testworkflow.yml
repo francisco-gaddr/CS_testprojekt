@@ -33,13 +33,13 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      run: dotnet test --no-build --verbosity normal --logger "trx;LogFileName=minTestLogg.trx"
+      run: dotnet test --no-build --verbosity normal --logger "trx;LogFileName=testresults.trx"
       
     - name: Store test results
       uses: actions/upload-artifact@v3.1.2
       with: 
         name: mitt-test-resultat
-        path: /
+        path: testresults
 
   approve: 
   
@@ -57,7 +57,7 @@ jobs:
         
     - name: Check Test Results
       run : |
-        if grep -q "Failed=0" minTestLogg.trx; then
+        if grep -q "Failed=0" testresults.trx; then
           echo "All looks well"
           exit 0
         else
