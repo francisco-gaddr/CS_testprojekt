@@ -1,6 +1,6 @@
 # CS_testprojekt
 
 
-![example workflow](https://github.com/francisco-gaddr/CS_testprojekt/blob/master/.github/workflows/testworkflow.yml/badge.svg)
+[![TestTrigger](https://github.com/francisco-gaddr/CS_testprojekt/actions/workflows/testworkflow.yml/badge.svg)](https://github.com/francisco-gaddr/CS_testprojekt/actions/workflows/testworkflow.yml)
 
 Detta är ett testprojekt för TDD
