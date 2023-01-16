@@ -45,11 +45,6 @@ jobs:
         name: mitt-test-resultat
         path: TestResults
 
-    - name: Kolla Kod-review
-      uses: peter-evans/request-review@v3
-      with:
-        reviewers: francisco-gaddr
-        
   
 
 
