@@ -37,13 +37,10 @@ namespace CS_testprojekt.Dice
         public static int trowDice(int minValue, int maxValue)
         {
 
-          
-
-
             Random rnd = new Random();
             int randomValue = rnd.Next(minValue,maxValue); // Detta värde är slumpat
 
-            return randomValue+99;
+            return randomValue;
         }
 
 
