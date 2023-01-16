@@ -44,6 +44,17 @@ jobs:
       with: 
         name: mitt-test-resultat
         path: TestResults
+        
+    - name: Check Test Results
+      run : |
+        if grep -q "Failed=0" testresults.trx; then
+          echo "All looks well"
+          exit 0
+        else
+          echo "Some tests did not pass"
+          exit 1
+        fi
+        
 
   approve: 
     needs: build
