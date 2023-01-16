@@ -33,4 +33,4 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      run: dotnet test --no-build --verbosity medium
+      run: dotnet test --no-build --verbosity normal
