@@ -10,10 +10,10 @@ namespace CS_testprojekt
         public void AdditionTest(int valueA, int valueB, int expected, string e)
         {
             // Arrange
-            var calc = new Calculator();
+            var calculator = new Calculator();
 
             // Act
-            var actual = calc.Add(valueA, valueB);
+            var actual = calculator.Add(valueA, valueB);
 
          
             // Assert
