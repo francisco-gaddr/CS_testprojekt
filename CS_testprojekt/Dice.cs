@@ -37,10 +37,7 @@ namespace CS_testprojekt.Dice
         public static int trowDice(int minValue, int maxValue)
         {
 
-            totalThrows = 77;
-
-            Console.WriteLine(totalThrows);
-
+        
 
             Random rnd = new Random();
             int randomValue = rnd.Next(minValue,maxValue); // Detta värde är slumpat
