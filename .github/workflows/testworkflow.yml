@@ -39,7 +39,7 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with: 
         name: mitt-test-resultat
-        path: testresults
+        path: testresults.trx
 
   approve: 
     needs: build
