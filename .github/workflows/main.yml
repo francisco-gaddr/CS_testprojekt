@@ -2,7 +2,7 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 # Detta är en kommentar :) Kommer ej att tolkas som kod
 
-name: TestTrigger
+name: TestTrigger_Ett_steg
 
 on:
   push:
@@ -45,7 +45,10 @@ jobs:
         name: mitt-test-resultat
         path: TestResults
 
-    - uses: rocktimsaikia/badge-it@2.0.0
+    - name: Kolla Kod-review
+      uses: peter-evans/request-review@v3
+      with:
+        reviewers: francisco-gaddr
         
   
 
