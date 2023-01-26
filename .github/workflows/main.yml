@@ -43,7 +43,7 @@ jobs:
 
     - name: Require successful tests
       if: failure()
-      uses: actions/github-script@latest
+      uses: actions/github-script@v6
       with:
         script: |
           const context = GitHub.context;
