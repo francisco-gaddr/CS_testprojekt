@@ -44,19 +44,7 @@ jobs:
     - name: Require successful tests
       if: failure()
       uses: actions/github-script@v6
-      with:
-        script: |
-          const context = GitHub.context;
-          const pullRequest = context.payload.pull_request;
-          const message = 'Tests did not pass, please fix the issues and try again.';
-          const labels = ['tests failed'];
-
-          const params = context.issue({
-            state: 'open',
-            labels: labels,
-            body: message
-          });
-          await GitHub.issues.create(params);
+ 
 
   
 
