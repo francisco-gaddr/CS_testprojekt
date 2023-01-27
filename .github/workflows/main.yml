@@ -41,9 +41,6 @@ jobs:
     - name: logging show
       run: ls -la
 
-    - name: Require successful tests
-      if: failure()
-      uses: actions/github-script@v6
  
 
   
