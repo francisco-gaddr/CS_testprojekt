@@ -17,7 +17,7 @@ namespace CS_testprojekt
 
          
             // Assert
-            Assert.Equal(expected, 334);
+            Assert.Equal(expected, 98989);
 
         }
 
